@@ -1,0 +1,12 @@
+{
+  "name": "flezi-option-1-user-auth",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flow-2 Option 1 - User Registration & Login (zero-dependency Node.js)",
+  "main": "src/server.js",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-reporter=spec test/*.test.js"
+  }
+}

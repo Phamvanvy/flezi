@@ -1,0 +1,35 @@
+.signin { max-width: 440px; margin: 40px auto; }
+.signin button { margin-top: 12px; }
+.items { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.items button { background: #e7edf4; color: var(--ink); }
+.items button[aria-current="true"] { background: var(--ink); color: #fff; }
+.item-head { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-bottom: 20px; }
+.item-head h2 { font-size: 22px; margin-bottom: 4px; }
+.item-head p { margin: 0; }
+.avg { text-align: center; min-width: 140px; background: #fff7e6; border-radius: var(--radius); padding: 12px 18px; }
+.avg-number { font-size: 40px; font-weight: 800; line-height: 1; }
+.stars-static { color: #f59e0b; font-size: 20px; letter-spacing: 2px; margin: 4px 0; }
+.stars-static .off { color: #d9e2ec; }
+.columns { display: grid; grid-template-columns: 1fr 1.3fr; gap: 20px; align-items: start; }
+.rating-label { font-weight: 600; font-size: 14px; margin: 4px 0 4px; }
+.star-input { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 2px; }
+.star-input input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.star-input label { margin: 0; font-size: 30px; line-height: 1; color: #d9e2ec; cursor: pointer; font-weight: 400; }
+.star-input input:checked ~ label,
+.star-input label:hover,
+.star-input label:hover ~ label { color: #f59e0b; }
+.star-input input:focus-visible + label { outline: 2px solid var(--accent); border-radius: 4px; }
+.counter { text-align: right; font-size: 12px; margin-top: 4px; }
+.review-form button[type="submit"] { width: 100%; margin-top: 12px; padding: 11px; }
+.reviews { list-style: none; margin: 0; padding: 0; }
+.reviews li { padding: 12px 0; border-top: 1px solid var(--line); }
+.reviews li:first-child { border-top: 0; }
+.reviews .head { display: flex; align-items: center; gap: 10px; }
+.reviews .author { font-weight: 700; }
+.reviews .stars-static { font-size: 15px; margin: 0; }
+.reviews .time { margin-left: auto; color: var(--muted); font-size: 12px; }
+.reviews .text { margin: 6px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.reviews .mine { background: #f0f9ff; border-radius: 8px; padding: 12px; }
+.tag { font-size: 11px; font-weight: 700; background: #e0f2fe; color: #075985; border-radius: 99px; padding: 2px 8px; }
+.small { font-size: 13px; font-weight: 400; }
+@media (max-width: 760px) { .columns { grid-template-columns: 1fr; } .item-head { flex-direction: column; align-items: flex-start; } }

@@ -1,0 +1,27 @@
+main.layout { max-width: 1180px; display: grid; grid-template-columns: 260px 1fr; gap: 20px; align-items: start; }
+.filters label:first-child { margin-top: 0; }
+fieldset { border: 0; padding: 0; margin: 14px 0 0; }
+legend { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+.categories { display: grid; gap: 6px; }
+.categories label { display: flex; align-items: center; gap: 8px; font-weight: 400; margin: 0; text-transform: capitalize; }
+.categories input { width: auto; accent-color: var(--accent); }
+.categories .count { margin-left: auto; color: var(--muted); font-size: 12px; }
+.price { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; min-height: 30px; margin-bottom: 12px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; background: #e0f2fe; color: #075985; border-radius: 99px; padding: 4px 6px 4px 12px; font-size: 13px; font-weight: 600; }
+.chip button { background: transparent; color: inherit; padding: 0 6px; font-size: 15px; line-height: 1; }
+.chip.clear { background: transparent; color: var(--err); padding: 4px 8px; cursor: pointer; border: 0; font: inherit; font-size: 13px; font-weight: 600; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.product { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; gap: 6px; }
+.product .tile { height: 70px; border-radius: 8px; display: grid; place-items: center; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; }
+.tile.books { background: #7c3aed; } .tile.electronics { background: #0e7c86; } .tile.toys { background: #d97706; }
+.tile.home { background: #be185d; } .tile.sports { background: #15803d; } .tile.clothing { background: #1d4ed8; }
+.product h3 { margin: 4px 0 0; font-size: 15px; }
+.product p { margin: 0; font-size: 13px; color: var(--muted); }
+.product .price-tag { margin-top: auto; font-weight: 700; font-size: 16px; }
+.skeleton { height: 190px; border-radius: var(--radius); background: linear-gradient(90deg, #e7edf4 25%, #f3f6fa 50%, #e7edf4 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.pager { display: flex; gap: 6px; justify-content: center; margin: 18px 0; flex-wrap: wrap; }
+.pager button { background: #e7edf4; color: var(--ink); min-width: 38px; padding: 7px 10px; }
+.pager button[aria-current="page"] { background: var(--ink); color: #fff; }
+@media (max-width: 760px) { main.layout { grid-template-columns: 1fr; } }

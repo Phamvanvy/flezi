@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flezi Cart</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Flezi Shop</h1>
+    <div class="who"><span id="who"></span> <button class="secondary" id="logout" hidden>Sign out</button></div>
+  </header>
+  <main>
+    <section class="card signin" id="signin" hidden>
+      <h2>Sign in</h2>
+      <p class="muted">Pick a username. Your cart is saved to your account.</p>
+      <form novalidate>
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" maxlength="20" placeholder="e.g. alice">
+        <p class="field-error"></p>
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <div id="app" class="shop" hidden>
+      <section class="card" aria-labelledby="products-title">
+        <h2 id="products-title">Products</h2>
+        <ul class="products" id="products"></ul>
+      </section>
+
+      <div class="cart-col">
+        <section class="card" aria-labelledby="cart-title">
+          <h2 id="cart-title">Your cart <span class="muted" id="item-count"></span></h2>
+          <table class="cart" id="cart-table" hidden>
+            <thead><tr><th>Item</th><th class="num">Unit</th><th>Qty</th><th class="num">Line total</th><th><span class="sr-only">Remove</span></th></tr></thead>
+            <tbody id="cart-lines"></tbody>
+          </table>
+          <div class="empty" id="cart-empty" hidden>
+            <strong>Your cart is empty</strong>
+            Browse the products and add something you like.
+            <div><button type="button" id="browse" class="secondary browse">Browse products</button></div>
+          </div>
+        </section>
+
+        <section class="card summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">Order summary</h2>
+          <dl>
+            <dt>Subtotal</dt><dd id="subtotal">$0.00</dd>
+            <dt class="grand">Grand total</dt><dd class="grand" id="grand-total">$0.00</dd>
+          </dl>
+          <button type="button" id="checkout" disabled>Checkout</button>
+          <p class="muted small" id="checkout-hint">Add items to enable checkout.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="/client.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

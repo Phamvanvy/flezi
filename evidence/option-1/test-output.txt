@@ -1,0 +1,31 @@
+▶ Option 1 - User Registration & Login
+  ▶ Unit test scenarios (spec table)
+    ✔ #1 valid new email + password -> user is created and hash != plaintext (80.0417ms)
+    ✔ #2 already-registered email -> 409 and no duplicate created (42.0637ms)
+    ✔ #3 invalid email or short password -> 400 with per-field errors (7.7463ms)
+    ✔ #4 registered user + correct password -> token with expiry (68.729ms)
+    ✔ #5 registered user + wrong password -> 401 with generic message (135.8423ms)
+    ✔ #6 stored hash + correct password -> verify returns true (round-trip) (125.0107ms)
+  ✔ Unit test scenarios (spec table) (460.3984ms)
+  ▶ Acceptance criteria & edge cases
+    ✔ never exposes the password or hash in any response (67.4358ms)
+    ✔ treats different casing/whitespace as the same account (66.8185ms)
+    ✔ rejects empty or missing fields with 400 (5.4439ms)
+    ✔ requires a letter and a number in the password (4.7912ms)
+    ✔ rejects extremely long input values (8.0094ms)
+    ✔ login before any registration exists -> 401 generic (63.0391ms)
+    ✔ rejects malformed JSON with 400 (3.6821ms)
+    ✔ sets an HttpOnly, SameSite=Strict session cookie on login (67.3193ms)
+    ✔ protects /me: 401 without, with tampered or with expired token (67.8471ms)
+    ✔ locks out repeated failed logins with 429 (193.65ms)
+    ✔ never logs raw passwords or tokens (68.5062ms)
+  ✔ Acceptance criteria & edge cases (617.1458ms)
+✔ Option 1 - User Registration & Login (1078.4306ms)
+ℹ tests 17
+ℹ suites 3
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1160.7918

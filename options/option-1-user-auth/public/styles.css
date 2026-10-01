@@ -1,0 +1,15 @@
+.auth-wrap { max-width: 440px; margin: 64px auto; }
+.auth-card h1 { margin: 0 0 4px; font-size: 24px; }
+.auth-card form { margin-top: 12px; }
+.auth-card button[type="submit"] { width: 100%; margin-top: 16px; padding: 11px; }
+.rules { list-style: none; padding: 0; margin: 8px 0 0; font-size: 13px; display: grid; gap: 3px; }
+.rules li { color: var(--muted); }
+.rules li::before { content: "○ "; }
+.rules li.met { color: var(--ok); }
+.rules li.met::before { content: "✓ "; }
+.toggle { text-align: center; margin: 18px 0 0; font-size: 14px; }
+.toggle a { color: var(--accent); font-weight: 600; }
+.home { max-width: 640px; }
+.home dl { display: grid; grid-template-columns: 140px 1fr; gap: 8px 12px; margin: 16px 0; }
+.home dt { font-weight: 600; color: var(--muted); }
+.home dd { margin: 0; }

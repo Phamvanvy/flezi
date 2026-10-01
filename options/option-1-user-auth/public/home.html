@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flezi Dashboard</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Flezi Dashboard</h1>
+    <button class="secondary" id="logout">Sign out</button>
+  </header>
+  <main class="home">
+    <section class="card" id="profile" hidden>
+      <h2>You are signed in</h2>
+      <p class="muted">This page is protected: its data comes from <code>GET /me</code>, which requires a valid session.</p>
+      <dl>
+        <dt>Email</dt><dd id="me-email"></dd>
+        <dt>User ID</dt><dd id="me-id"></dd>
+        <dt>Member since</dt><dd id="me-created"></dd>
+      </dl>
+    </section>
+    <p class="muted" id="loading">Loading your profile…</p>
+  </main>
+  <script src="/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+▶ Option 3 - Product Catalog with Search & Filter
+  ▶ Unit test scenarios (spec table)
+    ✔ #1 products across categories, filter by one category -> only that category (33.167ms)
+    ✔ #2 keyword + price range -> correct intersection (4.8771ms)
+    ✔ #3 42 products, pageSize 10, page 2 -> items 11-20 + metadata (3.1442ms)
+    ✔ #4 minPrice > maxPrice -> empty set without error (1.8663ms)
+    ✔ #5 keyword matching nothing -> empty list + totalItems = 0 (2.8771ms)
+  ✔ Unit test scenarios (spec table) (46.6354ms)
+  ▶ Acceptance criteria & edge cases
+    ✔ multi-category via repeated params narrows by union of categories (2.6363ms)
+    ✔ combines every filter as an intersection (3.5665ms)
+    ✔ sorts by price ascending / descending and newest by default (5.631ms)
+    ✔ rejects negative and non-numeric prices and unknown sort with 400 (5.5677ms)
+    ✔ clamps paging: page < 1 -> 1, pageSize bounded to 50 (1.2074ms)
+    ✔ page beyond totalPages -> empty items with correct metadata (0.9722ms)
+    ✔ treats special characters literally (no injection, no wildcard abuse) (4.959ms)
+    ✔ keyword search is case-insensitive and matches description (1.5866ms)
+    ✔ returns prices as exact 2-decimal numbers (1.2112ms)
+    ✔ lists categories with counts (1.5491ms)
+  ✔ Acceptance criteria & edge cases (29.4862ms)
+✔ Option 3 - Product Catalog with Search & Filter (103.1193ms)
+ℹ tests 15
+ℹ suites 3
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 181.9987

@@ -1,0 +1,29 @@
+▶ Option 5 - Comment & Rating System
+  ▶ Unit test scenarios (spec table)
+    ✔ #1 rating of 0 or 6 -> create rejected with 400 (67.0065ms)
+    ✔ #2 user with an existing review submits again -> updated, not duplicated (19.801ms)
+    ✔ #3 ratings [5, 3, 4] -> average 4.0, count 3 (13.2385ms)
+    ✔ #4 item with no reviews -> average 0, count 0 (8.217ms)
+    ✔ #5 user B edits user A's review -> 403 (10.5626ms)
+    ✔ #6 several reviews over time -> listed newest-first (12.6116ms)
+  ✔ Unit test scenarios (spec table) (132.488ms)
+  ▶ Acceptance criteria & edge cases
+    ✔ rejects non-integer, string and missing ratings (12.2853ms)
+    ✔ comment is optional, trimmed and length-limited (13.3242ms)
+    ✔ author can edit via PUT /reviews/:id and the average is recomputed (8.8778ms)
+    ✔ PUT validates input and returns 404 for unknown review (10.9055ms)
+    ✔ requires authentication to write, but reading is public (10.5423ms)
+    ✔ returns the signed-in user's own review for pre-filling the form (8.8195ms)
+    ✔ averages round to 1 decimal and never divide by zero (10.3957ms)
+    ✔ returns 404 for an unknown item (9.0805ms)
+    ✔ concurrent double submission still yields exactly one review (9.8644ms)
+  ✔ Acceptance criteria & edge cases (94.634ms)
+✔ Option 5 - Comment & Rating System (228.0958ms)
+ℹ tests 15
+ℹ suites 3
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 315.9073

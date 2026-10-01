@@ -1,0 +1,12 @@
+{
+  "name": "flezi-option-3-product-catalog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Flow-2 Option 3 - Product Catalog with Search & Filter (zero-dependency Node.js)",
+  "main": "src/server.js",
+  "engines": { "node": ">=22.5" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test --test-reporter=spec test/*.test.js"
+  }
+}

@@ -1,0 +1,28 @@
+▶ Option 4 - Shopping Cart & Checkout Summary
+  ▶ Unit test scenarios (spec table)
+    ✔ #1 product already in cart, add same product -> quantity increments, no duplicate line (56.0553ms)
+    ✔ #2 unit price 9.99 x 3 -> line total 29.97, grand total sums lines (17.6122ms)
+    ✔ #3 item in cart, set quantity to 0 -> item removed (12.556ms)
+    ✔ #4 empty cart, get cart -> grand total 0 and no items (8.0079ms)
+    ✔ #5 quantity -1 or 1.5 -> update rejected with 400 (11.3273ms)
+  ✔ Unit test scenarios (spec table) (106.3734ms)
+  ▶ Acceptance criteria & edge cases
+    ✔ avoids floating-point drift (0.10 x 3 = 0.30, not 0.30000000000000004) (6.4535ms)
+    ✔ rejects invalid quantities and unknown products on add (11.1608ms)
+    ✔ adding the same product rapidly (concurrently) never duplicates lines (18.1551ms)
+    ✔ rapid absolute quantity updates settle on the last value (no drift) (12.1264ms)
+    ✔ removing the last item empties the cart with total 0 (9.7097ms)
+    ✔ snapshots the unit price at add time (later price changes do not affect the cart) (7.1887ms)
+    ✔ keeps carts separate per user and requires auth (10.7905ms)
+    ✔ persists the cart across restarts (file-backed DB) (39.7535ms)
+    ✔ checkout is rejected for an empty cart and clears the cart on success (7.7788ms)
+  ✔ Acceptance criteria & edge cases (123.6909ms)
+✔ Option 4 - Shopping Cart & Checkout Summary (230.9302ms)
+ℹ tests 14
+ℹ suites 3
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 315.4346

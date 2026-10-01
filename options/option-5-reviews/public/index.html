@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flezi Reviews</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Flezi Reviews</h1>
+    <div class="who"><span id="who"></span> <button class="secondary" id="logout" hidden>Sign out</button></div>
+  </header>
+  <main>
+    <section class="card signin" id="signin" hidden>
+      <h2>Sign in</h2>
+      <p class="muted">Pick a username to leave a review. You can try a second username to see the one-review-per-user rule.</p>
+      <form novalidate>
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" maxlength="20" placeholder="e.g. alice">
+        <p class="field-error"></p>
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <div id="app" hidden>
+      <nav class="items" id="items" aria-label="Items"></nav>
+
+      <section class="card item-head">
+        <div>
+          <h2 id="item-name"></h2>
+          <p class="muted" id="item-desc"></p>
+        </div>
+        <div class="avg" aria-live="polite">
+          <div class="avg-number" id="avg-number">0.0</div>
+          <div class="stars-static" id="avg-stars" aria-hidden="true"></div>
+          <div class="muted" id="avg-count">0 reviews</div>
+        </div>
+      </section>
+
+      <div class="columns">
+        <form class="card review-form" id="review-form" novalidate>
+          <h2 id="form-title">Write a review</h2>
+          <div class="rating-label" id="rating-label">Your rating</div>
+          <div class="star-input" id="star-input" role="radiogroup" aria-labelledby="rating-label"></div>
+          <p class="field-error" id="rating-error"></p>
+          <label for="comment">Comment <span class="muted">(optional)</span></label>
+          <textarea id="comment" rows="4" maxlength="1000" placeholder="What did you like or dislike?"></textarea>
+          <div class="counter muted"><span id="count">0</span>/1000</div>
+          <button type="submit" id="submit"><span class="spinner" id="spinner" hidden></span><span id="submit-label">Submit review</span></button>
+        </form>
+
+        <section class="card">
+          <h2>Reviews <span class="muted small">newest first</span></h2>
+          <ul class="reviews" id="reviews"></ul>
+          <div class="empty" id="empty" hidden><strong>Be the first to review</strong>No one has reviewed this item yet.</div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script src="/client.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

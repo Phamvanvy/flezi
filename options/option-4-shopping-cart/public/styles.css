@@ -1,0 +1,28 @@
+.signin { max-width: 420px; margin: 40px auto; }
+.signin button { margin-top: 12px; }
+.shop { display: grid; grid-template-columns: 1fr 1.25fr; gap: 20px; align-items: start; }
+.cart-col { display: grid; gap: 20px; }
+.products { list-style: none; margin: 0; padding: 0; }
+.products li { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+.products li:first-child { border-top: 0; }
+.products .name { flex: 1; font-weight: 600; }
+.products .price { color: var(--muted); min-width: 70px; text-align: right; }
+.products button { padding: 6px 12px; font-size: 13px; }
+table.cart { width: 100%; border-collapse: collapse; font-size: 14px; }
+.cart th { text-align: left; color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; padding: 6px 4px; border-bottom: 1px solid var(--line); }
+.cart td { padding: 10px 4px; border-bottom: 1px solid var(--line); }
+.cart .num { text-align: right; white-space: nowrap; }
+.stepper { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.stepper button { background: #f1f5f9; color: var(--ink); padding: 4px 10px; border-radius: 0; }
+.stepper output { min-width: 32px; text-align: center; font-weight: 600; }
+.remove { background: transparent; color: var(--err); padding: 4px 8px; font-size: 13px; }
+.summary dl { display: grid; grid-template-columns: 1fr auto; gap: 8px 0; margin: 0 0 16px; }
+.summary dt { color: var(--muted); }
+.summary dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.summary .grand { font-size: 20px; font-weight: 700; color: var(--ink); border-top: 1px solid var(--line); padding-top: 8px; }
+.summary button { width: 100%; padding: 11px; }
+.small { font-size: 13px; margin: 8px 0 0; }
+.browse { margin-top: 12px; }
+.flash { animation: flash 0.6s ease; }
+@keyframes flash { from { background: #e0f2fe; } to { background: transparent; } }
+@media (max-width: 820px) { .shop { grid-template-columns: 1fr; } }

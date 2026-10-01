@@ -1,0 +1,16 @@
+{
+  "name": "flezi-report-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Captures UI/test evidence from the option apps and builds the Flow-2 report decks",
+  "scripts": {
+    "evidence": "node --disable-warning=ExperimentalWarning shoot.js",
+    "decks": "node build-decks.js",
+    "check": "for n in 1 2 3 4 5; do node render-check.js ../deliverables/Flow2_vypv_Flezi-E1-Dev_Option_$n.pptx ../render/opt$n; done"
+  },
+  "dependencies": {
+    "jszip": "^3.10.2",
+    "playwright-core": "^1.63.0",
+    "pptxgenjs": "^4.0.1"
+  }
+}

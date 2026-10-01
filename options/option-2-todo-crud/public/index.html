@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flezi Tasks</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>My Tasks</h1>
+    <div class="who"><span id="who"></span> <button class="secondary" id="logout" hidden>Sign out</button></div>
+  </header>
+
+  <main>
+    <section class="card signin" id="signin" hidden>
+      <h2>Sign in</h2>
+      <p class="muted">Pick a username. Each user only sees their own tasks.</p>
+      <form novalidate>
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" maxlength="20" placeholder="e.g. alice">
+        <p class="field-error"></p>
+        <button type="submit">Continue</button>
+      </form>
+    </section>
+
+    <section id="app" hidden>
+      <form class="card add" id="add-form" novalidate>
+        <div class="add-fields">
+          <div>
+            <label for="new-title">Title</label>
+            <input id="new-title" maxlength="200" placeholder="What needs doing?">
+          </div>
+          <div>
+            <label for="new-desc">Description <span class="muted">(optional)</span></label>
+            <input id="new-desc" maxlength="2000" placeholder="Details">
+          </div>
+          <button type="submit" id="add-btn">Add task</button>
+        </div>
+        <p class="field-error" id="add-error"></p>
+      </form>
+
+      <div class="card list-card">
+        <nav class="tabs" role="tablist" aria-label="Filter tasks">
+          <button role="tab" data-filter="all" aria-selected="true">All</button>
+          <button role="tab" data-filter="open" aria-selected="false">Open</button>
+          <button role="tab" data-filter="done" aria-selected="false">Done</button>
+        </nav>
+        <ul class="tasks" id="tasks" aria-live="polite"></ul>
+        <div class="empty" id="empty" hidden><strong>No tasks here yet</strong>Add your first task above to get started.</div>
+      </div>
+    </section>
+  </main>
+  <script src="/client.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

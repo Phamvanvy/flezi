@@ -1,0 +1,27 @@
+▶ Option 2 - Task/To-Do CRUD
+  ▶ Unit test scenarios (spec table)
+    ✔ #1 empty / whitespace title -> create fails with 400 (67.9813ms)
+    ✔ #2 task owned by A, user B updates/deletes it -> access denied (404) (18.893ms)
+    ✔ #3 open task, toggle -> becomes done (and back) (9.7437ms)
+    ✔ #4 non-existent task id, delete -> 404 (6.6874ms)
+    ✔ #5 mixed statuses, list ?status=open -> only open tasks (12.4935ms)
+  ✔ Unit test scenarios (spec table) (116.5683ms)
+  ▶ Acceptance criteria & edge cases
+    ✔ create returns 201 with the full resource and trimmed title (8.1986ms)
+    ✔ requires authentication on every endpoint (401) (9.5534ms)
+    ✔ edits title and description, and bumps updatedAt (11.9025ms)
+    ✔ rejects a whitespace-only title on update and invalid status (10.398ms)
+    ✔ rejects an unknown ?status filter with 400 (6.5871ms)
+    ✔ toggling twice with the same target status is idempotent (double-click safe) (8.5974ms)
+    ✔ deleting a task already deleted in another tab -> 404, delete is permanent (9.5763ms)
+    ✔ lists only the caller's tasks, newest first, and stays fast with dozens of tasks (58.4551ms)
+  ✔ Acceptance criteria & edge cases (123.8106ms)
+✔ Option 2 - Task/To-Do CRUD (241.1976ms)
+ℹ tests 13
+ℹ suites 3
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 325.6774

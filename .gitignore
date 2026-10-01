@@ -1,0 +1,6 @@
+node_modules/
+options/*/data/
+render/
+*.db
+.DS_Store
+Thumbs.db

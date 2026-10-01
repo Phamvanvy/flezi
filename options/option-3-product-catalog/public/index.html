@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flezi Catalog</title>
+  <link rel="stylesheet" href="/base.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Product Catalog</h1>
+    <div class="who" id="summary" aria-live="polite"></div>
+  </header>
+  <main class="layout">
+    <aside class="card filters" aria-label="Filters">
+      <label for="search">Search</label>
+      <input id="search" type="search" maxlength="100" placeholder="Name or description">
+
+      <fieldset>
+        <legend>Category</legend>
+        <div id="categories" class="categories"></div>
+      </fieldset>
+
+      <div class="price">
+        <div>
+          <label for="minPrice">Min price</label>
+          <input id="minPrice" inputmode="decimal" placeholder="0">
+        </div>
+        <div>
+          <label for="maxPrice">Max price</label>
+          <input id="maxPrice" inputmode="decimal" placeholder="Any">
+        </div>
+      </div>
+      <p class="field-error" id="price-error"></p>
+
+      <label for="sort">Sort by</label>
+      <select id="sort">
+        <option value="newest">Newest</option>
+        <option value="price_asc">Price: low to high</option>
+        <option value="price_desc">Price: high to low</option>
+        <option value="name_asc">Name: A-Z</option>
+      </select>
+    </aside>
+
+    <section class="results">
+      <div class="chips" id="chips"></div>
+      <div class="grid" id="grid" aria-busy="false"></div>
+      <div class="card empty" id="empty" hidden><strong>No products found</strong>Try a different keyword or clear some filters.</div>
+      <nav class="pager" id="pager" aria-label="Pagination"></nav>
+    </section>
+  </main>
+  <script src="/client.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
